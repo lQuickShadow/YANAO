@@ -3,7 +3,7 @@ from Models.Role import Role
 
 
 class Users(BaseModel):
-    id = IntegerField(primary_key=True)
+    id = PrimaryKeyField(primary_key=True)
     name = CharField()
     role = ForeignKeyField(model=Role)
     login = CharField(unique=True)

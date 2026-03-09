@@ -1,4 +1,4 @@
-from Base import *
+from Models.Base import *
 
 
 class Category(BaseModel):
@@ -13,7 +13,7 @@ class Category(BaseModel):
     INFORMATION = 8     # Информационная поддержка
     OTHER = 9           # Другое
 
-    id = IntegerField(primary_key=True)
+    id = PrimaryKeyField(primary_key=True)
     title = TextField(unique=True)
     description = TextField(null=True)
 

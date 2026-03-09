@@ -1,14 +1,14 @@
 
 from datetime import datetime
 
-from Base import *
+from Models.Base import *
 from Models.Category import Category
 from Models.Status import Status
 from Models.Users import Users
 
 
 class Ticket(BaseModel):
-    id = IntegerField(primary_key=True)
+    id = PrimaryKeyField(primary_key=True)
     title = CharField()
     description = TextField()
     status_id = ForeignKeyField(model=Status)

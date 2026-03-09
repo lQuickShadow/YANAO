@@ -1,4 +1,4 @@
-from Base import *
+from Models.Base import *
 
 
 class Status(BaseModel):
@@ -7,7 +7,7 @@ class Status(BaseModel):
     IN_PROGRESS = 2  # В работе
     DONE = 3         # Завершено
 
-    id = IntegerField(primary_key=True)
+    id = PrimaryKeyField(primary_key=True)
     name = CharField(unique=True)
 
     class Meta:

@@ -1,11 +1,11 @@
-from Base import *
+from Models.Base import *
 from Models.Users import Users
 from Models.Type import Type
 from Models.Ticket import Ticket
 
 
 class Comment(BaseModel):
-    id = IntegerField(primary_key=True)
+    id = PrimaryKeyField(primary_key=True)
     description = TextField()
     user_id = ForeignKeyField(model=Users)
     ticket_id = ForeignKeyField(model=Ticket)

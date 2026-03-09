@@ -1,4 +1,4 @@
-from Base import *
+from Models.Base import *
 
 
 class Role(BaseModel):
@@ -7,7 +7,7 @@ class Role(BaseModel):
     SPECIALIST = 2    # Специалист
     ADMIN = 3         # Администратор
 
-    id = IntegerField(primary_key=True)
+    id = PrimaryKeyField(primary_key=True)
     name = CharField(unique=True)
 
     class Meta:

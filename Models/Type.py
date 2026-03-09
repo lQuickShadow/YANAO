@@ -1,10 +1,10 @@
-from Base import *
+from Models.Base import *
 
 class Type(BaseModel):
     PUBLIC = 1      # Видно всем (пользователь, тех, админ)
     INTERNAL = 2    # Внутренний, только тех + админ
 
-    id = IntegerField(primary_key=True)
+    id = PrimaryKeyField(primary_key=True)
     name = CharField(unique=True)
 
     class Meta:
